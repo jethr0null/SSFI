@@ -1,15 +1,15 @@
 #include <stdio.h>
+#include <stdlib.h>
 
- int main (int argc, char *argv[]) {
-	 int i =0;
-	 printf("\ncmdline args count =%d\n", argc);
+int main (int argc, char *argv[]) {
+	char *dirpath = 0;
 
- 	 printf("\nexe name=%s", argv[0]);
+	if (argc != 2) { 
+		printf("Try again asshole.\n");
+		exit(1); 
+	}
+	dirpath = argv[1];
+	printf("Your directory path is [%s]\n", dirpath);
+}
 
-	 for (i=1; i< argc; i++) {
-		 printf("\narg%d=%s", i, argv[i]);
-	 }
-	 printf("\n");
-	 return 0;
- }
 
